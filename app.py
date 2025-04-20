@@ -14,11 +14,11 @@ import pickle
 with open('kmeans_model.pkl', 'rb') as f:
     loaded_model = pickle.load(f)
     
-#set title application
-st.title("📈 K-means clustering Visualizer by Pornprom Ounsuchat")
-
 #set page config
 st.set_page_config(page_title = "K-means Clustering", layout = "centered")
+    
+#set title application
+st.title("📈 K-means clustering Visualizer by Pornprom Ounsuchat")
 
 #load dataset
 X, _ =  make_blobs(n_samples=300, centers=loaded_model.n_clusters, cluster_std=0.60, random_state=0)
